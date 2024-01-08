@@ -65,7 +65,7 @@ export const ProjectList: ProjectType[] = [
       styled_components,
       axios,
       nodeJs,
-      express,rm -rf ./.git
+      express,
       mongoDB,
       s3,
     ],
