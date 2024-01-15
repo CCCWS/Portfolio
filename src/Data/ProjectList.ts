@@ -118,7 +118,7 @@ export const ProjectList: ProjectType[] = [
     thumbnail: portfolio_thumbnail,
     image: portfolio_img_arr,
     skill: [react, typescript, styled_components],
-    repositoryUrl: "https://github.com/CCCWS/ddd",
+    repositoryUrl: "https://github.com/CCCWS/Portfolio",
     deploy: github_page,
     deployUrl: "https://cccws.github.io/ddd/",
   },
