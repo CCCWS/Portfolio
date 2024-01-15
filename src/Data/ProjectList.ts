@@ -120,6 +120,6 @@ export const ProjectList: ProjectType[] = [
     skill: [react, typescript, styled_components],
     repositoryUrl: "https://github.com/CCCWS/Portfolio",
     deploy: github_page,
-    deployUrl: "https://cccws.github.io/ddd/",
+    deployUrl: "https://cccws.github.io/Portfolio/",
   },
 ];
