@@ -78,17 +78,6 @@ const ProjectItem = styled.div<ProjectItemProps>`
 
   border-radius: 5px;
 
-  /* transition: ${(props) => props.isView && "opacity 1s, transform 1s"};
-  transition-delay: ${(props) =>
-    props.isView ? `calc(${props.delay}s / 3.5)` : "0s"};
-  transform: ${(props) =>
-    props.isView ? "translateY(0px)" : "translateY(-100px)"};
-  opacity: ${(props) => (props.isView ? "1" : "0")}; */
-
-  /* filter: grayscale(100%); */
-  /* box-shadow: ${(props) =>
-    `5px 10px 10px 1px ${props.theme.color.black}`}; */
-
   position: relative;
   overflow: hidden;
   border-radius: 10px;
