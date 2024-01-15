@@ -46,12 +46,12 @@ const Div = styled.div`
 const CarouselImg = styled.img`
   width: 100%;
   height: 100%;
-  background-color: white;
   object-fit: contain;
 
   transition: 0.3s;
 
   &:hover {
+    cursor: pointer;
     opacity: 0.5;
   }
 `;

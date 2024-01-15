@@ -27,16 +27,15 @@ import aiChat_02 from "./PageImage/aiChat/aiChat_02.PNG";
 import aiChat_03 from "./PageImage/aiChat/aiChat_03.PNG";
 
 import portfolio_01 from "./PageImage/portfolio/portfolio_01.PNG";
+import portfolio_02 from "./PageImage/portfolio/portfolio_02.PNG";
+import portfolio_03 from "./PageImage/portfolio/portfolio_03.PNG";
+import portfolio_04 from "./PageImage/portfolio/portfolio_04.PNG";
+import portfolio_05 from "./PageImage/portfolio/portfolio_05.PNG";
 
-import memo_01 from "./PageImage/memo/memo_01.PNG";
-import memo_02 from "./PageImage/memo/memo_02.PNG";
-import memo_03 from "./PageImage/memo/memo_03.PNG";
-import memo_04 from "./PageImage/memo/memo_04.PNG";
-import memo_05 from "./PageImage/memo/memo_05.PNG";
-import memo_06 from "./PageImage/memo/memo_06.PNG";
-
-import todo_01 from "./PageImage/todo/todo_01.PNG";
-import todo_02 from "./PageImage/todo/todo_02.PNG";
+import recycle_01 from "./PageImage/recycle/recycle_01.PNG";
+import recycle_02 from "./PageImage/recycle/recycle_02.PNG";
+import recycle_03 from "./PageImage/recycle/recycle_03.PNG";
+import recycle_04 from "./PageImage/recycle/recycle_04.PNG";
 
 export const shopping_img_arr: string[] = [
   shoping_01,
@@ -67,14 +66,17 @@ export const movie_img_arr: string[] = [
 ];
 export const aiChat_img_arr: string[] = [aiChat_01, aiChat_02, aiChat_03];
 
-export const portfolio_img_arr: string[] = [portfolio_01];
-export const memo_img_arr: string[] = [
-  memo_01,
-  memo_02,
-  memo_03,
-  memo_04,
-  memo_05,
-  memo_06,
+export const portfolio_img_arr: string[] = [
+  portfolio_01,
+  portfolio_02,
+  portfolio_03,
+  portfolio_04,
+  portfolio_05,
 ];
 
-export const todo_img_arr: string[] = [todo_01, todo_02];
+export const recycle_img_arr: string[] = [
+  recycle_01,
+  recycle_02,
+  recycle_03,
+  recycle_04,
+];

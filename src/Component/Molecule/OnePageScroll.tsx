@@ -147,8 +147,9 @@ const Point = styled.div<{ location: boolean }>`
   margin: 10px;
 
   &:hover {
-    background-color: black;
+    background-color: gray;
     transform: scale(2);
+    cursor: pointer;
   }
 `;
 

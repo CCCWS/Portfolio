@@ -11,7 +11,7 @@ import GlobalStyle from "@Style/GlobalStyle";
 import theme from "./Style/Theme";
 
 import Main from "@Page/Main/Main";
-import About from "@Page/About";
+import About from "@Page/About/About";
 import Project from "@Page/Project/Project";
 import TestHeader from "@Component/Organism/TestHeader";
 import MIniGameBtn from "@Component/Organism/MiniGame/MIniGameBtn";

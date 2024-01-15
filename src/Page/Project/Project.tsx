@@ -26,23 +26,6 @@ const Project = () => {
         location={location}
         setLocation={setLocation}
       >
-        {/* <ProjectBox ref={projectItemRef}>
-          <div>
-            {ProjectList.map((data, index) => (
-              <ProjectItem
-                key={index}
-                
-                onClick={() => setLocation(index + 1)}
-                img={data.thumbnail}
-                title={data.title}
-                isView={projectItemView}
-                delay={index}
-              />
-            ))}
-          </div>
-        </ProjectBox> */}
-        
-
         <ImageGalleryBox ref={galleryRef} isView={galleryView}>
           <ImageGallery perspective={2000} zAxis={500} reflect={false}>
             {ProjectList.map((data, index) => (
@@ -67,38 +50,12 @@ const Project = () => {
 };
 
 const ImageGalleryBox = styled.div<{ isView: boolean }>`
-  /* background-color: red; */
   width: 100%;
   height: 100%;
 
   transition: 0.5s;
 
   opacity: ${(props) => (props.isView ? "1" : "0")};
-`;
-
-const ProjectBox = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-  height: 100%;
-
-  & > :first-child {
-    width: 70%;
-    height: 100%;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    align-items: center;
-
-    /* background-color: blue; */
-
-    @media (max-width: 900px) {
-      width: 100%;
-    }
-  }
 `;
 
 interface ProjectItemProps {
@@ -117,6 +74,8 @@ const ProjectItem = styled.div<ProjectItemProps>`
   background-size: cover;
   background-repeat: no-repeat;
 
+  background-color: #46464684;
+
   border-radius: 5px;
 
   /* transition: ${(props) => props.isView && "opacity 1s, transform 1s"};
@@ -134,7 +93,7 @@ const ProjectItem = styled.div<ProjectItemProps>`
   overflow: hidden;
   border-radius: 10px;
 
-  &::before { 
+  &::before {
     content: "${(props) => props.title}";
     color: white;
 
@@ -160,12 +119,12 @@ const ProjectItem = styled.div<ProjectItemProps>`
     transition: 0.5s;
     transform: translateY(50px);
     opacity: 0;
-    border-radius: inherit;
   }
 
   &:hover {
     transition: 0.5s;
     filter: grayscale(0);
+    cursor: pointer;
 
     &::before {
       transform: translateY(0px);

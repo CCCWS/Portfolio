@@ -66,11 +66,11 @@ const Main = () => {
         <CardBox>
           {cardArr.map((data, index) => (
             <React.Fragment key={index}>
-              <Card lastMessage={messageIndex === message.length} data={data} />
+              <Card loading={!loading} data={data} />
             </React.Fragment>
           ))}
 
-          <MessageBox
+          {/* <MessageBox
             onClick={onClickMessage}
             lastMessage={messageIndex === message.length}
             isLoading={loading}
@@ -81,7 +81,7 @@ const Main = () => {
               or
               <Icon backImg={clickImg} />
             </IconBox>
-          </MessageBox>
+          </MessageBox> */}
         </CardBox>
       </MainBox>
     </Page>

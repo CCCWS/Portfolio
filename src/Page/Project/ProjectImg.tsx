@@ -63,6 +63,7 @@ const ProjectImgList = styled.img`
   transition: 0.3s;
 
   &:hover {
+    cursor: pointer;
     opacity: 0.5;
   }
 `;

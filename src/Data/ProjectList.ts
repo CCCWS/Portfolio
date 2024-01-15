@@ -24,16 +24,14 @@ import {
   movie_img_arr,
   aiChat_img_arr,
   portfolio_img_arr,
-  memo_img_arr,
-  todo_img_arr,
+  recycle_img_arr,
 } from "./ImageList";
 
 import shopping_thumbnail from "@Data/Thumbnail/shopping_thumbnail.PNG";
 import portfolio_thumbnail from "@Data/Thumbnail/portfolio_thumbnail.PNG";
 import ai_thumbnail from "@Data/Thumbnail/ai_thumbnail.PNG";
-import memo_thumbnail from "@Data/Thumbnail/memo_thumbnail.PNG";
 import movie_thumbnail from "@Data/Thumbnail/movie_thumbnail.PNG";
-import todoList_thumbnail from "@Data/Thumbnail/todoList_thumbnail.PNG";
+import recycle_thumbnail from "@Data/Thumbnail/recycle_thumbnail.PNG";
 
 export interface ProjectType {
   title: string;
@@ -104,6 +102,16 @@ export const ProjectList: ProjectType[] = [
   },
 
   {
+    title: "재사용 가능한 컴포넌트",
+    description:
+      "Material-UI와 같이 완성된 컴포넌트를 재사용하기 위해 꾸준히 추가 개선 중인 컴포넌트 모음입니다.",
+    thumbnail: recycle_thumbnail,
+    image: recycle_img_arr,
+    skill: [react, typescript, javascript, styled_components],
+    repositoryUrl: "https://github.com/CCCWS/react-component",
+  },
+
+  {
     title: "포트폴리오",
     description: "프로젝트 소개를 위한 포트폴리오 사이트입니다.",
     // purpose: "프로젝트 소개",
@@ -113,29 +121,5 @@ export const ProjectList: ProjectType[] = [
     repositoryUrl: "https://github.com/CCCWS/ddd",
     deploy: github_page,
     deployUrl: "https://cccws.github.io/ddd/",
-  },
-
-  {
-    title: "심플 메모",
-    description:
-      "간단한 메모를 날짜와 점수를 선택하여 등록하는 메모장 사이트입니다. 데이터는 localstorage에 저장되며 수정 및 삭제가 가능하고 작성일별 정렬과 점수별 필터링이 가능합니다.",
-    // purpose: "context api를 이용한 데이터 전달과 localstorage에 데이터 저장",
-    thumbnail: memo_thumbnail,
-    image: memo_img_arr,
-    skill: [javascript, css, react],
-    repositoryUrl: "https://github.com/CCCWS/react-simpleMemo-app",
-    deploy: firebase,
-    deployUrl: "https://cws-react-project.web.app/",
-  },
-
-  {
-    title: "Todo List",
-    description:
-      "자바스크립트를 학습하며 처음 만들어본 페이지입니다. 현재 위치를 기반으로 날씨가 표시되고 사용자 이름을 입력받고 로그인, 간단한 메모를 작성할 수 있습니다.",
-    // purpose: "자바스크립트, html, css 기초학습",
-    thumbnail: todoList_thumbnail,
-    image: todo_img_arr,
-    skill: [javascript, html, css],
-    repositoryUrl: "https://github.com/CCCWS/vanillaJS",
   },
 ];

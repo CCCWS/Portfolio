@@ -15,11 +15,11 @@ interface CardType {
 }
 
 interface CardProps {
-  lastMessage: boolean;
+  loading: boolean;
   data: CardType;
 }
 
-const Card = ({ lastMessage, data }: CardProps) => {
+const Card = ({ loading, data }: CardProps) => {
   const nav = useNavigate();
   const onNav = (path: string, newPage?: boolean) => {
     if (newPage) {
@@ -33,18 +33,14 @@ const Card = ({ lastMessage, data }: CardProps) => {
   return (
     <>
       <CardDiv
-        lastMessage={lastMessage}
+        $loading={loading}
         left={data.left}
         delay={data.delay}
         onClick={() => onNav(data.path, data.newPage)}
       >
         <Card3D hoverScale={1.2} haveParentComponent={true}>
-          <Front
-            lastMessage={lastMessage}
-            img={data.image}
-            title={data.title}
-          ></Front>
-          <Back lastMessage={lastMessage} backImg={questionImg}></Back>
+          <Front $loading={loading} img={data.image} title={data.title}></Front>
+          <Back $loading={loading} backImg={questionImg}></Back>
         </Card3D>
       </CardDiv>
     </>
@@ -52,7 +48,7 @@ const Card = ({ lastMessage, data }: CardProps) => {
 };
 
 interface CardStyle {
-  lastMessage: boolean;
+  $loading: boolean;
   left: number;
   delay: number;
 }
@@ -78,7 +74,7 @@ const CardBase = styled.div`
 `;
 
 interface FrontStyle {
-  lastMessage: boolean;
+  $loading: boolean;
   img: string;
   title: string;
 }
@@ -86,9 +82,9 @@ interface FrontStyle {
 const Front = styled(CardBase)<FrontStyle>`
   position: absolute;
   background-color: ${(props) => props.theme.color.gray_transparency};
-  transition-delay: ${(props) => (props.lastMessage ? "0.8s" : "0s")};
+  transition-delay: ${(props) => (props.$loading ? "0.8s" : "0s")};
   transform: ${(props) =>
-    props.lastMessage ? "rotateY(0deg)" : "rotateY(180deg)"};
+    props.$loading ? "rotateY(0deg)" : "rotateY(180deg)"};
 
   background-image: ${(props) => `url(${props.img})`};
   background-position: center;
@@ -122,12 +118,12 @@ const Front = styled(CardBase)<FrontStyle>`
   }
 `;
 
-const Back = styled(CardBase)<{ lastMessage: boolean; backImg: string }>`
+const Back = styled(CardBase)<{ $loading: boolean; backImg: string }>`
   position: absolute;
   background-color: ${(props) => props.theme.color.gray_transparency};
-  transition-delay: ${(props) => (props.lastMessage ? "0.8s" : "0s")};
+  transition-delay: ${(props) => (props.$loading ? "0.8s" : "0s")};
   transform: ${(props) =>
-    props.lastMessage ? "rotateY(180deg)" : "rotateY(0deg)"};
+    props.$loading ? "rotateY(180deg)" : "rotateY(0deg)"};
 
   background-image: ${(props) => `url(${props.backImg})`};
   background-position: center;
@@ -153,7 +149,7 @@ const CardDiv = styled.div<CardStyle>`
   opacity: 0;
   z-index: 1;
 
-  transition: 0.5s;
+  transition: 1s;
 
   @media (max-width: 600px) {
     width: 80%;
@@ -165,11 +161,11 @@ const CardDiv = styled.div<CardStyle>`
   }
 
   ${(props) =>
-    props.lastMessage &&
+    props.$loading &&
     css`
       top: 50%;
       left: ${() => `${props.left}%`};
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%) rotate(360deg);
       opacity: 1;
 
       @media (max-width: 600px) {

@@ -116,3 +116,17 @@ export const visual_studio_code: SkillType = {
   name: "Visual Studio Code",
   img: visual_studio_code_Img,
 };
+
+const base: SkillType[] = [javascript, typescript, html, css];
+const front: SkillType[] = [react, redux, styled_components];
+const back: SkillType[] = [nodeJs, express];
+const database: SkillType[] = [mongoDB, s3];
+const deploy: SkillType[] = [ec2, netlify, github_page];
+
+export const skillListArr = [
+  { title: "Base", data: base },
+  { title: "Frontend", data: front },
+  { title: "Backend", data: back },
+  { title: "Database", data: database },
+  { title: "Deploy", data: deploy },
+];
