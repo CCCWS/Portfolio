@@ -74,7 +74,7 @@ const ProjectItem = styled.div<ProjectItemProps>`
   background-size: cover;
   background-repeat: no-repeat;
 
-  background-color: #46464684;
+  background-color: #ffffff;
 
   border-radius: 5px;
 
